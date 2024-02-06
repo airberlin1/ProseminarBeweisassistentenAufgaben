@@ -2,17 +2,20 @@
 -- Import modules here that should be built as part of the library.
 import «TacticTasks».Basic
 
-example (p q : Prop) : p ∧ q → p ∨ q := by
+variable (p q r : Prop)
+
+example : p ∧ q → p ∨ q := by
   admit
 
-example (x : Nat) : x ≤ 0 → x = 0 := by
+example : (p → (q → r)) ↔ (p ∧ q → r) := by
   admit
 
-example (x y : Nat) (hx: x ≤ y) : ∃ (a : Nat), x + a = y := by
+example : p ∨ (q ∧ r) ↔ (p ∨ q) ∧ (p ∨ r) := by
   admit
 
-example (x y : Nat) (hx : x = 3) (hy : x + y  = 6) : x = y := by
+
+variable (n m : Nat)
+
+example : n ≤ 0 → n = 0 := by
   admit
 
-example (p q r : Prop) : p ∨ (q ∧ r) ↔ (p ∨ q) ∧ (p ∨ r) := by
-  admit
